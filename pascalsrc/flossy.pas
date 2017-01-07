@@ -1,6 +1,6 @@
 program flossy;
 
-uses Crt, math, SDL2, SDL2_image, SDL_ttf;
+uses Crt, math, SDL2, SDL2_image, SDL2_ttf;
 
 const
     WIDTH = 640+320;
@@ -36,8 +36,8 @@ procedure Intersect;
 var
     top,bottom,left,right, paddle1, paddle2 : Boolean;
 begin
-    left := ((Sheep.r^.x <= Player1.r^.x + Player1.r^.w) 
-        and (Sheep.r^.y > Player1.r^.y) 
+    left := ((Sheep.r^.x <= Player1.r^.x + Player1.r^.w)
+        and (Sheep.r^.y > Player1.r^.y)
         and (Sheep.r^.y + Sheep.r^.h < Player1.r^.y + Player1.r^.h));
     right := ((Sheep.r^.x >= Player2.r^.x)
         and (Sheep.r^.y > Player2.r^.y)
@@ -50,7 +50,7 @@ begin
         Sheep.angle := round(Sheep.angle) mod round(360.0);
     end;
 
-    if left then begin 
+    if left then begin
         writeln('Hit Paddle 1!');
         Sheep.angle := Sheep.angle + 90;
         Sheep.angle := round(Sheep.angle) mod round(360);

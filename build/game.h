@@ -3,6 +3,7 @@
 
 #include "sprite.h"
 
+char dbg_text[256];
 
 struct Application;
 
@@ -20,7 +21,7 @@ typedef struct Game Game;
 
 Game *game_Init(struct Application *app);
 
-void game_Update(Game *game, double delta);
+void game_Update(Game *game, SDL_Event *e, double delta);
 
 void game_Free(Game *game);
 

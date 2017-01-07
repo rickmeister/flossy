@@ -1,6 +1,6 @@
 env = Environment()
 env.Append(CFLAGS='-ggdb -DDEBUG_MALLOC -std=c99 -Wall -pedantic')
 app = "../flossy"
-libs = "SDL2 SDL2_image SDL2_mixer m"
+libs = "SDL2 SDL2_image SDL2_mixer SDL2_ttf  m"
 
 env.Program(app, Glob('*.c'), LIBS=Split(libs))
